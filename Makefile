@@ -12,5 +12,5 @@ SRCS = main.c parse_url.c
 clean:
 	rm -f $(OBJ) ./src/curl
 
-run: ./src/curl
-	./src/curl
+run_test: ./src/curl
+	./src/curl -d '{"value": "hello"}' -H 'Content-Type: application/json' https://example.com/api/v1/test/
